@@ -1,4 +1,4 @@
-## Welcome to the LEAP Hand ROS1 SDK
+## LEAP Hand ROS1 SDK (NOW DEPRECATED)
 
 ### On Ubuntu
 - Install [ROS 1 Noetic](http://wiki.ros.org/ROS/Installation) normally first on Ubuntu 20.04.
@@ -19,15 +19,15 @@
 -  cd ~/catkin_ws/src/ros_module
 - `chmod +x leaphand_node.py`
 #### To Launch
-- Connect 5v power to the hand (the dynamixels should light up during boot up.)
+- Connect 5v power to the hand (the servos should light up during boot up.)
 - Connect the Micro USB cable to the hand (Do not use too many USB extensions)
 - Find the USB port using [Dynamixel Wizard](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/)
 - `roslaunch example.launch`
 #### How to use
-- This is an example Launch script for just LEAP Hand.  The hand should come to life.  It makes topics you can publish to and services. You can see that with for example:
+- This is an example Launch script for just LEAP Hand.  The hand should move to home position.  It makes topics you can publish to and services. You can see that with for example:
 - `rostopic list`
 - `rosservice list`
 - `rosservice call leap_position`
 - Publishing commands the hand and querying the services asks to receive data.
-- Please see ros_example.py for example python code that uses this LEAP Module.
-- Also see leaphand_node.py, the actual ros module, for further details.  It wraps the Python API.  It should be easy to read.  :)
+- See ros_example.py for example python code that uses this LEAP Module.
+- See leaphand_node.py, the actual ros module, for further details.
